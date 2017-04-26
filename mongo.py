@@ -19,11 +19,11 @@ def get_all_frameworks():
 
     return jsonify({'result' : output})
 
-@app.route('/language/<name>', methods=['GET'])
+@app.route('/language/<langId>', methods=['GET'])
 def get_one_framework(name):
     languages = mongo.db.languages
 
-    q = languages.find_one({'name' : name})
+    q = languages.find_one({'_id' : landId})
 
     if q:
         output = {'name' : q['name'], "creator" : q["creator"], "pictureURL" : q["pictureURL"]}
