@@ -1,1 +1,1 @@
-web: gunicorn mongo.py --log-file -
+web: python mongo.py --log-file -
