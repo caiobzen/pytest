@@ -20,7 +20,7 @@ def get_all_frameworks():
     return jsonify({'result' : output})
 
 @app.route('/language/<langId>', methods=['GET'])
-def get_one_framework(name):
+def get_one_language(langId):
     languages = mongo.db.languages
 
     q = languages.find_one({'_id' : langId})
