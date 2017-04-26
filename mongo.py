@@ -16,7 +16,7 @@ def get_all_frameworks():
     output = []
 
     for q in languages.find():
-        output.append({'name' : q['name']})
+        output.append({'name' : q['name'], "creator" : q["creator"], "pictureURL" : q["pictureURL"]})
 
     return jsonify({'result' : output})
 
