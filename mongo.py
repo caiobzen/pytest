@@ -16,7 +16,7 @@ def get_all_frameworks():
     output = []
 
     for q in languages.find():
-        output.append({'name' : q['name'], "creator" : q["creator"], "pictureURL" : q["pictureURL"]})
+        output.append({'_id' : q['_id'], 'name' : q['name'], "creator" : q["creator"], "pictureURL" : q["pictureURL"]})
 
     return jsonify({'result' : output})
 
@@ -27,7 +27,7 @@ def get_one_language(langId):
     q = languages.find_one({'_id' : ObjectId(str(langId))})
 
     if q:
-        output = {'name' : q['name'], "creator" : q["creator"], "pictureURL" : q["pictureURL"]}
+        output = {'_id' : q['_id'], 'name' : q['name'], "creator" : q["creator"], "pictureURL" : q["pictureURL"]}
     else:
         output = 'No results found'
 
