@@ -17,7 +17,7 @@ def get_all_frameworks():
     for q in languages.find():
         output.append({'name' : q['name']})
 
-    return jsonify(output)
+    return jsonify({'result' : output})
 
 @app.route('/language/<name>', methods=['GET'])
 def get_one_framework(name):
