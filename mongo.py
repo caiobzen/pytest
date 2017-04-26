@@ -23,7 +23,7 @@ def get_all_frameworks():
 def get_one_framework(name):
     languages = mongo.db.languages
 
-    q = languages.find_one({'_id' : landId})
+    q = languages.find_one({'_id' : langId})
 
     if q:
         output = {'name' : q['name'], "creator" : q["creator"], "pictureURL" : q["pictureURL"]}
