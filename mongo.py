@@ -26,7 +26,7 @@ def get_one_framework(name):
     q = languages.find_one({'name' : name})
 
     if q:
-        output = {'name' : q['name']}
+        output = {'name' : q['name'], "creator" : q["creator"], "pictureURL" : q["pictureURL"]}
     else:
         output = 'No results found'
 
